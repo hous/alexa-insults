@@ -67,7 +67,7 @@ function handleSessionStartIntent(session, response) {
 };
 
 function handleQuitIntent(intent, session, response) {
-	var speechOutput = "Thank you for playing Future.";
+	var speechOutput = "Sorry, I didn't understand that.";
 	response.tell(speechOutput);
 }
 
