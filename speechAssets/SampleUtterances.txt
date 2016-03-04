@@ -1,0 +1,6 @@
+QuitIntent stop
+QuitIntent Alexa stop
+QuitIntent quit
+QuitIntent Alexa quit
+QuitIntent exit
+QuitIntent Alexa exit

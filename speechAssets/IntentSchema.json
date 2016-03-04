@@ -1,0 +1,12 @@
+{
+	"intents": [
+		{
+			"intent": "SessionStartIntent",
+			"slots": []
+		},
+		{
+			"intent": "QuitIntent",
+			"slots": []
+		}
+	]
+}
