@@ -111,7 +111,9 @@ gulp.task('test', function(callback) {
 	});
 });
 
-// The key to deploying as a single command is to manage the sequence of events.
+/**
+ * This will publish a new version of the lambda function. Straight to prod.
+ */
 gulp.task('publish', function(callback) {
 	return runSequence(
 		['clean'],
