@@ -12,6 +12,10 @@ module.exports = {
 		"How does it feel to know that you are a complete disappointment and will amount to nothing?",
 		"I'll bet even Mr. Rogers couldn't think of something nice to say about you.",
 		"You are a terrible person and you should feel bad about yourself.",
-		"If you have any self esteem you should donate it to someone who deserves it, because you are a talentless clown."
+		"If you have any self esteem you should donate it to someone who deserves it, because you are a talentless clown.",
+		"Do you still love nature, despite what it did to you?",
+		"When, exactly, did you decide to give up?",
+		"Were you born on a highway? Because that's where most terrible accidents happen.",
+		"That's a great shirt you have on. It just looks terrible on you... Because you're ugly."
 	]
 }
