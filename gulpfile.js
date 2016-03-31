@@ -15,7 +15,7 @@ var runSequence = require('run-sequence');
 var CONFIG = require('./src/config');
 
 /**
- * This will publish a new version of the lambda function. Straight to prod.
+ * This will publish a new version of the lambda function to prod.
  *
  * Make sure AWS CLI tools are installed and configured before running this.
  * @see http://aws.amazon.com/sdk-for-node-js/
