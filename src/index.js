@@ -27,7 +27,7 @@ debugMode = !debugMode;
 var AlexaSkill = require('./AlexaSkill');
 
 var Skill = function () {
-		AlexaSkill.call(this, APP_ID);
+  AlexaSkill.call(this, APP_ID);
 };
 
 // Extend AlexaSkill
@@ -35,59 +35,58 @@ Skill.prototype = Object.create(AlexaSkill.prototype);
 Skill.prototype.constructor = Skill;
 
 Skill.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, session) {
-		console.log("InsultMe onSessionStarted requestId: " + sessionStartedRequest.requestId
-				+ ", sessionId: " + session.sessionId);
-		// any initialization logic goes here
+  console.log("InsultMe onSessionStarted requestId: " + sessionStartedRequest.requestId
+      + ", sessionId: " + session.sessionId);
+  // any initialization logic goes here
 };
 
 Skill.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-	console.log("InsultMe onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
-	handleSessionStartIntent(session, response);
+  console.log("InsultMe onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
+  handleSessionStartIntent(session, response);
 };
 
 Skill.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
-		console.log("InsultMe onSessionEnded requestId: " + sessionEndedRequest.requestId
-				+ ", sessionId: " + session.sessionId);
-		// any cleanup logic goes here
+  console.log("InsultMe onSessionEnded requestId: " + sessionEndedRequest.requestId + ", sessionId: " + session.sessionId);
+  // any cleanup logic goes here
 };
 
 Skill.prototype.intentHandlers = {
-		// register custom intent handlers
-	SessionStartIntent: function (intent, session, response) {
-		handleSessionStartIntent(session, response);
-	},
-	QuitIntent: function (intent, session, response) {
-		handleQuitIntent(intent, session, response);
-	}
+    // register custom intent handlers
+  SessionStartIntent: function (intent, session, response) {
+    handleSessionStartIntent(session, response);
+  },
+  QuitIntent: function (intent, session, response) {
+    handleQuitIntent(intent, session, response);
+  }
 };
 
 function handleSessionStartIntent(session, response) {
-	var quote = getRand(DATA.insults);
-    response.tellWithCard(quote, CONFIG.skillTitle, quote);
-};
+  var quote = getRand(DATA.insults);
+  response.tellWithCard(quote, CONFIG.skillTitle, quote);
+}
 
 function handleQuitIntent(intent, session, response) {
-	var speechOutput = "Sorry, I didn't understand that.";
-	response.tell(speechOutput);
+  var speechOutput = "Sorry, I didn't understand that.";
+  response.tell(speechOutput);
 }
 
 function debug(intent, session, response) {
-	console.log("*************************");
-	console.log("INTENT");
-	console.log(intent);
-	console.log("SESSION");
-	console.log(session);
-	console.log("RESPONSE");
-	console.log(response);
+  console.log("*************************");
+  console.log("INTENT");
+  console.log(intent);
+  console.log("SESSION");
+  console.log(session);
+  console.log("RESPONSE");
+  console.log(response);
 }
 
 function getRand(array) {
-	return array[Math.floor(Math.random()*array.length)]
+  return array[Math.floor(Math.random()*array.length)]
 }
 
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
-		// Create an instance of the InsultMe skill.
-		var skill = new Skill();
-		skill.execute(event, context);
+  // Create an instance of the InsultMe skill.
+  var skill = new Skill();
+  skill.execute(event, context);
 };
