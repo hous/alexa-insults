@@ -13,7 +13,6 @@ module.exports = {
 		"I'll bet even Mr. Rogers couldn't think of something nice to say about you.",
 		"You are a terrible person and you should feel bad about yourself.",
 		"If you have any self esteem you should donate it to someone who deserves it, because you are a talentless clown.",
-		"That is a very nice shirt you are wearing. It just looks terrible on you, because you are very ugly.",
 		"Were you born on a highway? Because that is where most terrible accidents happen.",
 		"Have you ever considered donating blood? Like, all of your blood?",
 		"That's a great shirt you have on. It just looks terrible on you... Because you're ugly."
